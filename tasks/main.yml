@@ -28,8 +28,7 @@
     - 'config/{{ ansible_distribution }}.yml'
     - 'config/{{ ansible_os_family }}.yml'
     - 'config/default.yml'
-  when: (snapraid_enabled | bool) and
-        (snapraid_configure_ansible | bool)
+  when: snapraid_enabled | bool
   loop_control:
     loop_var: found_item
   tags: [ 'snapraid', 'snapraid-config' ]

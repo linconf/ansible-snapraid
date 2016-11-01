@@ -21,7 +21,7 @@
   args:
     chdir: '{{ snapraid_build_path }}'
 
-- name: install/docker-Debian - Install snapraid
+- name: install/docker-Debian - Install SnapRAID
   apt: 
     deb: '{{ snapraid_build_path }}/artifact/snapraid-{{snapraid_build_target_version}}.deb'
   when: snapraid_install | bool

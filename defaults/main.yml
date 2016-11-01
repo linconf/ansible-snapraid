@@ -12,6 +12,20 @@ snapraid_enabled: True
 # Set to False to build from source... and stop
 snapraid_install: True
 
+snapraid_conf_parity_file:
+  - '/mnt/diskp/snapraid.parity'
+snapraid_conf_content_list:
+  - '/var/snapraid.content'
+  - '/mnt/disk1/snapraid.content'
+  - '/mnt/disk2/snapraid.content'
+snapraid_conf_data_disk:
+  - '/mnt/disk1/'
+  - '/mnt/disk2/'
+  - '/mnt/disk3/'
+snapraid_conf_exclude:
+  - '*.unrecoverable'
+  - '/tmp/'
+  - '/lost+found/'
 
 #|
 #| Installation Options
@@ -24,7 +38,7 @@ snapraid_install_from_docker: False
 
 #| Install from pre-compiled package file (example: files/Debian.deb)
 
-snapraid_install_file_name: ''
+snapraid_install_file_name: 'snapraid-v10.0.deb'
 
 #| Build From Source
 
