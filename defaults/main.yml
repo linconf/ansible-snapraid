@@ -12,6 +12,7 @@ snapraid_enabled: True
 # Set to False to build from source... and stop
 snapraid_install: True
 
+# Settings for /etc/snapraid.conf
 snapraid_conf_parity_file:
   - '/mnt/diskp/snapraid.parity'
 snapraid_conf_content_list:
@@ -26,6 +27,19 @@ snapraid_conf_exclude:
   - '*.unrecoverable'
   - '/tmp/'
   - '/lost+found/'
+
+# Settings for crontab
+snapraid_cron_jobs: []
+  # - name: Perform snapraid sync 
+  #   job: snapraid sync
+  #   minute: 20
+  #   hour: 2
+  #   day: *
+  #   weekday: *
+  #   month: *
+snapraid_cron_host_jobs: []
+snapraid_cron_group_jobs: []
+
 
 #|
 #| Installation Options

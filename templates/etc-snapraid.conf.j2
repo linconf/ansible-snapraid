@@ -40,10 +40,10 @@ content {{content_file}}
 # The name and mount point association is relevant for parity, do not change it
 # WARNING: Adding here your /home, /var or /tmp disks is NOT a good idea!
 # SnapRAID is better suited for files that rarely changes!
-# Format: "disk DISK_NAME DISK_MOUNT_POINT"
+# Format: "data DISK_NAME DISK_MOUNT_POINT"
 {% set count = 1 %}
 {% for data_disk in snapraid_conf_data_disk %}
-disk d{{ count }} {{data_disk}}
+data d{{ count }} {{data_disk}}
 {% set count = count + 1 %}
 {% endfor %}
 

@@ -33,5 +33,10 @@
     loop_var: found_item
   tags: [ 'snapraid', 'snapraid-config' ]
 
+- name: main - Configure crontab
+  include: 'cron.yml'
+  when: snapraid_enabled | bool
+  tags: [ 'snapraid', 'snapraid-cron' ]
+
 
   
